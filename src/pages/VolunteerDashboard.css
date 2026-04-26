@@ -1,0 +1,50 @@
+.volunteer-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.volunteer-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.profile-avatar {
+  background-color: var(--surface-hover);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--primary-color);
+}
+
+.profile-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xs);
+}
+
+.profile-skills {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .volunteer-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-skills {
+    text-align: left;
+  }
+}

@@ -1,0 +1,31 @@
+.task-map-container {
+  height: 500px;
+  width: 100%;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm);
+  position: relative;
+  z-index: 1; /* Keep map behind modals */
+}
+
+/* Override leaflet popup styles to fit our TaskCard */
+.leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: var(--border-radius);
+  background: transparent;
+  box-shadow: none;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: auto !important;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+/* Ensure TaskCard looks good inside the popup */
+.custom-popup .task-card {
+  margin: 0;
+  box-shadow: var(--shadow-lg);
+}
