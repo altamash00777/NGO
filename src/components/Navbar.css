@@ -47,3 +47,26 @@
   color: white;
   box-shadow: var(--shadow-sm);
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    width: calc(100% - var(--spacing-md) * 2);
+    top: var(--spacing-sm);
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-link {
+    flex: 1;
+    text-align: center;
+    min-width: 120px;
+  }
+}

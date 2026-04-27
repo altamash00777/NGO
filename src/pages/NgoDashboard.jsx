@@ -16,7 +16,7 @@ export const NgoDashboard = () => {
     requiredSkills: []
   });
 
-  const availableSkills = ['Medical', 'Education', 'Logistics'];
+  const availableSkills = ['Medical', 'Education', 'Logistics','Cooking','Management'];
 
   const handleSubmit = (e) => {
     e.preventDefault();

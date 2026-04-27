@@ -33,9 +33,14 @@
   height: 48px;
 }
 
-.tasks-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: var(--spacing-lg);
-}
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
 
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,7 +14,7 @@ export const VolunteerDashboard = () => {
     skills: volunteer.skills
   });
 
-  const availableSkills = ['Medical', 'Education', 'Logistics'];
+  const availableSkills = ['Medical', 'Education', 'Logistics','Cooking','Management'];
 
   const matchedTasks = getMatchedTasks();
   const acceptedTasks = tasks.filter(t => (t.status === 'Assigned' || t.status === 'Completed') && t.volunteerId === volunteer.id);
@@ -58,7 +58,7 @@ export const VolunteerDashboard = () => {
           </div>
         </div>
         
-        <div className="profile-skills" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 'var(--spacing-sm)' }}>
+        <div className="profile-skills" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)' }}>
           <Button variant="secondary" onClick={() => setIsEditingProfile(true)}>
             <Edit2 size={16} style={{marginRight: '8px'}} /> Edit Profile
           </Button>

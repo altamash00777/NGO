@@ -2,28 +2,22 @@ import React, { createContext, useState, useEffect } from 'react';
 
 export const AppContext = createContext();
 
-const initialTasks = [
-  { id: 1, title: 'Medical Supply Distribution', description: 'Need help distributing first-aid kits in Sector 4.', urgency: 'High', requiredSkills: ['Medical', 'Logistics'], status: 'Open', location: 'Sector 4' },
-  { id: 2, title: 'After-School Tutoring', description: 'Math and Science tutors needed for middle schoolers.', urgency: 'Medium', requiredSkills: ['Education'], status: 'Open', location: 'Community Center' },
-  { id: 3, title: 'Food Bank Sorting', description: 'Sort incoming donations at the central food bank.', urgency: 'Low', requiredSkills: ['Logistics'], status: 'Open', location: 'Downtown' },
-];
-
-const initialVolunteer = {
-  id: 101,
-  name: 'Alex Johnson',
-  skills: ['Medical', 'Education'],
-  location: 'Sector 4'
+const defaultVolunteer = {
+  id: 1,
+  name: 'Guest Volunteer',
+  skills: [],
+  location: ''
 };
 
 export const AppProvider = ({ children }) => {
   const [tasks, setTasks] = useState(() => {
     const saved = localStorage.getItem('sra_tasks');
-    return saved ? JSON.parse(saved) : initialTasks;
+    return saved ? JSON.parse(saved) : [];
   });
 
   const [volunteer, setVolunteer] = useState(() => {
     const saved = localStorage.getItem('sra_volunteer');
-    return saved ? JSON.parse(saved) : initialVolunteer;
+    return saved ? JSON.parse(saved) : defaultVolunteer;
   });
 
   const [notifications, setNotifications] = useState(() => {
